@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./vue.js"></script>
+  <title>105</title>
+</head>
+  <body>
+    <div id="app">
+      <span>Camisa</span>
+      <br>
+      <span>Valor: {{valor}}</span>
+      <br>
+      <span>Quantidade: {{qtd}}</span>
+      <br>
+      <button @click='qtd++'>Adicionar</button>
+      <button @click='qtd--'>Remover</button>
+      <br>
+      <br>
+      <span>Valor Total: {{valor*qtd}}</span>
+    </div>
+  </body>
+  <script>
+      const vm = new Vue({
+        el: '#app',
+        data: {
+          valor: 3.6,
+          qtd:0
+        }
+      });
+  </script>
+</html>
